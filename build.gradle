@@ -18,8 +18,7 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'io.projectreactor:reactor-test'
 
-	implementation("uk.sky.ovp.alto:alto-shared-webflux:at-28-03-23-09-56")
-
+	implementation 'uk.sky.ovp.alto:alto-shared-webflux:at-28-03-23-09-56'
 	implementation 'uk.sky.ovp.alto:alto-shared-reactor:1.1.0'
 	implementation 'com.bskyb.internettv.scs:sky-common-schema-filter-spring-webflux:0.60.0'
 	implementation 'uk.sky.ovp.alto:alto-shared-exceptions:0.7.0'
@@ -29,12 +28,8 @@ dependencies {
 	implementation 'uk.sky.ovp.alto:alto-shared-exceptions:0.7.0'
 	implementation 'uk.sky.ovp.alto:log-encryptor-spring-boot-starter:0.1.0+2.7'
 
-//	implementation "io.prometheus:simpleclient_hotspot:0.6.0"
-//	implementation "io.micrometer:micrometer-registry-prometheus:1.7.4"
-
-	// add actuator
-
-
+	implementation 'io.prometheus:simpleclient_hotspot:0.6.0'
+	implementation 'io.micrometer:micrometer-registry-prometheus:1.10.5'
 }
 
 repositories {
@@ -51,8 +46,4 @@ repositories {
 		url centralMirror
 	}
 	mavenLocal()
-}
-
-tasks.named('test') {
-	useJUnitPlatform()
 }
